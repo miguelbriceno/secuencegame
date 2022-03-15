@@ -9,8 +9,8 @@ var userChain = [];
 var started = false;
 var level = 0;
 
-// EventListener for keyboard to start game
-$(document).keypress(function() {
+// Start button EventListener
+$(".startbtn").click(function(){
   if (!started) {
     $("#level").text("You are in level " + level);
     started = true;
@@ -19,17 +19,121 @@ $(document).keypress(function() {
   }
 });
 
+
+// EventListener for keyboard to start game and play
+$(document).keypress(function(e) {
+  if (!started) {
+    $("#level").text("You are in level " + level);
+    started = true;
+    $(".btn").removeClass("disabled");
+    setTimeout(machineTurn, 500);
+  } else {
+    var keyPressed = e.key;
+    switch (keyPressed) {
+      case "1":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "2":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "3":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "4":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "5":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "6":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "7":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "8":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "9":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      case "0":
+        var idReplacement = "button" + keyPressed;
+        animatePress(idReplacement);
+        pressAudio.play();
+        userChain.push(keyPressed);
+        compare(userChain.length - 1);
+        break;
+
+      default:
+        break;
+    }
+  }
+});
+
+
 // Add EventListener to all buttons
-$(".btn").click(function(){
+$(".btn").click(function() {
   var btnPressed = $(this).attr("id");
   animatePress(btnPressed);
   pressAudio.play();
 })
 
-$(".gamebtn").click(function(){
+$(".startbtn").click(function() {
+  var btnPressed = $(this).attr("id");
+  animatePress(btnPressed);
+  pressAudio.play();
+})
+
+$(".gamebtn").click(function() {
   var pressedByUser = $(this).text();
   userChain.push(pressedByUser);
-  compare(userChain.length-1);
+  compare(userChain.length - 1);
 })
 
 // Reset button
@@ -38,7 +142,7 @@ $("#reset").click(resetGame);
 // Functions to animate buttons: When user plays
 function animatePress(button) {
   $("#" + button).addClass("btnPressed");
-  setTimeout(function () {
+  setTimeout(function() {
     $("#" + button).removeClass("btnPressed");
   }, 100);
 }
@@ -47,13 +151,13 @@ function animatePress(button) {
 function animateMachine(button) {
   $("#" + button).addClass("machinePlay");
   machineAudio.play();
-  setTimeout(function () {
+  setTimeout(function() {
     $("#" + button).removeClass("machinePlay");
   }, 200);
 }
 
 // Function that activate machine turn
-function machineTurn(){
+function machineTurn() {
   userChain = [];
   level++;
   var randomNumber = (Math.floor(Math.random() * 9)) + 1;
@@ -63,20 +167,20 @@ function machineTurn(){
 }
 
 // Function to reset the game
-function resetGame(){
+function resetGame() {
   machineChain = [];
   userChain = [];
   started = false;
   level = 0;
   $(".btn").addClass("disabled");
-  $("#level").text("Press any key to start");
+  $("#level").text("Press ✅ or any key to start");
 }
 
 //Function to compare arrays
 function compare(lastUserClic) {
   if (machineChain[lastUserClic] == userChain[lastUserClic]) {
     if (machineChain.length === userChain.length) {
-      setTimeout(function(){
+      setTimeout(function() {
         machineTurn();
         $("#level").text("You are in level " + level);
       }, 1000);
@@ -84,7 +188,7 @@ function compare(lastUserClic) {
   } else {
     $("#level").text("You made a mistake, try again.");
     mistakeAudio.play();
-    setTimeout(function(){
+    setTimeout(function() {
       resetGame();
     }, 2000);
   }

@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 
-.btn {
+.btn, .startbtn {
   width: 12vw;
   height: 12vw;
   margin: 1vw;

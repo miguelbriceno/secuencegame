@@ -168,12 +168,18 @@ function machineTurn() {
 
 // Function to reset the game
 function resetGame() {
-  machineChain = [];
-  userChain = [];
-  started = false;
-  level = 0;
+  $(".score").text("You reached level " + level);
+  $(".score").removeClass("hidden");
   $(".btn").addClass("disabled");
-  $("#level").text("Press ✅ or any key to start");
+  $("#level").text("👏Don´t give up!👏");
+  setTimeout(function(){
+    machineChain = [];
+    userChain = [];
+    started = false;
+    level = 0;
+    $(".score").addClass("hidden");
+    $("#level").text("Press ✅ or any key to start");
+  }, 4000);
 }
 
 //Function to compare arrays
@@ -190,6 +196,6 @@ function compare(lastUserClic) {
     mistakeAudio.play();
     setTimeout(function() {
       resetGame();
-    }, 2000);
+    }, 3000);
   }
 }

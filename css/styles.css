@@ -13,6 +13,24 @@ body {
   color: #DA1212;
 }
 
+.score {
+  position: absolute;
+  top: 10%;
+  right: 0.5%;
+  margin: 1vw;
+  color: #6B8C42;
+  font-family: 'Akaya Telivigala', cursive;
+  background-color: #0E185F;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 7vw;
+  margin: 0.5vw;
+  padding: 0.5vw;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -70,4 +88,8 @@ footer {
   pointer-events: none;
   background-color: gray;
   opacity: 0.5;
+}
+
+.hidden {
+  display: none;
 }

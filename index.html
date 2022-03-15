@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Secuence Game</title>
-    <link rel="icon" href="img\count.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/gamecode.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Secuence Game</title>
+  <link rel="icon" href="img\count.ico">
+  <!-- Booststrap call -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Google Fonts call -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Rajdhani&family=Rowdies:wght@300&family=Sansita+Swashed:wght@700&family=Staatliches&display=swap" rel="stylesheet">
+  <!-- Personal stylesheet call -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <section class="mainContent">
+    <h1 class="mainTitle" id="level">Press any key to start</h1>
+
+    <div class="row">
+      <div class="btn gamebtn disabled" type="button" id="button1">1</div>
+      <div class="btn gamebtn disabled" type="button" id="button2">2</div>
+      <div class="btn gamebtn disabled" type="button" id="button3">3</div>
+    </div>
+
+    <div class="row">
+      <div class="btn gamebtn disabled" type="button" id="button4">4</div>
+      <div class="btn gamebtn disabled" type="button" id="button5">5</div>
+      <div class="btn gamebtn disabled" type="button" id="button6">6</div>
+    </div>
+
+    <div class="row">
+      <div class="btn gamebtn disabled" type="button" id="button7">7</div>
+      <div class="btn gamebtn disabled" type="button" id="button8">8</div>
+      <div class="btn gamebtn disabled" type="button" id="button9">9</div>
+    </div>
+
+    <div class="row">
+      <div class="btn gamebtn disabled" type="button" id="button10">0</div>
+      <div class="btn disabled" type="button" id="reset">🔄</div>
+    </div>
+  </section>
+
+  <footer>
+    <h2 class="myName">🕹Miguel Angel Briceño🕹</h2>
+    <a class="cmcLink" href="https://www.compumastercapital.com/" target="_blank">Compumaster Capital</a>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/gamecode.js"></script>
+</body>
+
 </html>

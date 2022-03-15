@@ -1,0 +1,73 @@
+/* The CSS file is organized from top to bottom
+elemnts in the HTML file. */
+body {
+  background-color: #11468F;
+}
+.mainContent {
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 5vw;
+  font-family: 'Akaya Telivigala', cursive;
+  color: #DA1212;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 12vw;
+  height: 12vw;
+  margin: 1vw;
+  border: 0.5vw solid #4C5F7A;
+  border-radius: 10px;
+  box-shadow: 1vw 1vw #041562;
+  font-size: 5vw;
+  text-align: center;
+  background-color: #353941;
+  font-family: 'Sansita Swashed', cursive;
+  color: #B9D2D2;
+}
+
+
+footer {
+  text-align: center;
+  margin: 1vw;
+}
+
+.myName {
+  font-size: 2vw;
+  font-family: 'Rajdhani', sans-serif;
+  margin: 5vw auto 1vw auto;
+  color: #DA1212;
+}
+
+.cmcLink {
+  text-decoration: none;
+  font-size: 2vw;
+  font-family: 'Staatliches', cursive;
+  color: #3DBBDD;
+}
+
+/* Animaciones */
+.btnPressed {
+  box-shadow: 0.7vw 0.7vw #FF9F45;
+  position: relative;
+  top: 1vw;
+  left: 1vw;
+}
+
+.machinePlay {
+  background-color: #06FF00;
+  border-color: #FFE400;
+  box-shadow: 1vw 1vw #FF8E00;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: gray;
+  opacity: 0.5;
+}
